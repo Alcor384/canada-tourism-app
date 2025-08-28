@@ -9,7 +9,7 @@ export default function Register() {
     try {
       const res = await api.post("/auth/register", { username, password });
       alert("Successfully registered: " + res.data.username);
-    } catch (err) {
+    } catch (err: any) {
       alert("Fail to register: " + err.response.data.detail);
     }
   };
